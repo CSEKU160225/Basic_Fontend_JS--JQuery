@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>Set Time out and clear time out</h2>
+<script type="text/javascript">
+	var a=11;
+	function timeinit() {
+		// body...
+		if (a>0) {
+			document.getElementById("show").innerHTML=a;
+			a=a-1;
+			time=setTimeout("timeinit()",1000);
+			
+		}	
+	}
+
+	function claertime() {
+		// body...
+		clearTimeout(a);
+		document.getElementById("show").innerHTML="Time Clear.......";
+	}
+</script>
+<div id="show"></div>
+<input type="button" name="" value="start" onclick="timeinit()">
+<input type="button" name="" value="clear" onclick="claertime()">
+<h2>Email Validation </h2>
+<table>
+	<tr>
+		<td>Your Mail: </td>
+		<td><input type="text" name="" id="getvalue" onclick="validmail()"></td>
+	</tr>
+</table>
+<script type="text/javascript">
+	function validmail() {
+		// body...
+		getmail=document.getElementById("getvalue");
+		mail=getmail.value;
+		 var reg = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+		getmail.style.color="white";
+		if (reg.test(mail)) {
+			getmail.style.backgroundcolor="green";
+		}
+		else
+		{
+			getmail.style.backgroundcolor="red";
+		}
+
+	}
+	
+</script>
+
+</body>
+</html>

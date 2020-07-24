@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<corporate>
+ <employee>
+  <name>Hasan</name>
+  <age>25</age>
+  <company>Microsoft</company>
+ </employee>
+  <employee>
+  <name>Hasan2</name>
+  <age>25</age>
+  <company>Microsoft</company>
+ </employee>
+   <employee>
+  <name>Hasan2</name>
+  <age>25</age>
+  <company>Microsoft</company>
+ </employee>
+   <employee>
+  <name>Hasan2</name>
+  <age>25</age>
+  <company>Microsoft</company>
+ </employee>
+</corporate>

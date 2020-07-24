@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	      <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+       <style type="text/css">
+       	li{
+       		display: inline-block;
+       		padding: 25px;
+       		border: 1px solid #666;
+       		cursor: pointer;
+       	}
+       .ui-selected{
+      background: green;
+      color: red;
+       }
+       .ui-selecting{
+       	background: blue;
+       }
+       </style>
+</head>
+<script type="text/javascript">
+	$(document).ready(function (argument) {
+		// body...
+		$("#java").selectable({
+					stop:function (argument) {
+			// body...
+			var output="";
+			$(".ui-selected").each(function (argument) {
+				// body...
+				output+=$(this).text()+"<br/>";
+			});
+			$("#select").html(output);
+		}
+		});
+
+	});
+</script>
+<body>
+	<ul id="java">
+		<li>J1</li>
+		<li>J2</li>
+		<li>J3</li>
+	</ul>
+<h2>You select</h2>
+<div id="select"></div>
+</body>
+</html>

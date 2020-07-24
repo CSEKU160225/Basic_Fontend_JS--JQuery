@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+	<h2>FadeIN() FadeOut() FadeTo() FadeToggle()</h2>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				// body...
+				$("#fin").click(function () {
+					// body...
+					$(".abc").fadeIn();
+					
+				});
+				$("#fout").click(function () {
+					// body...
+					$(".abc").fadeOut();
+					
+				});
+				$("#fto").click(function () {
+					// body...
+					$(".abc").fadeTo(1000,.4);
+					
+				});
+				$("#ftogg").click(function () {
+					// body...
+					$(".abc").fadeToggle();
+					
+				});
+
+			});
+			a= "hellow";
+b="llo";
+c=a-b;
+document.write(c);
+			
+		</script>
+		<button id="fin">Fade IN</button>
+		<button id="fout">Fade Out</button>
+		<button id="fto">Fade To</button>
+		<button id="ftogg">Fade Toggle</button>
+		<div class="abc">
+		<h1 >I am Learning Jquery.</h1>
+		<p>I am Learning Jquery.I am Learning Jquery.I am Learning Jquery.I am Learning Jquery.I am Learning Jquery.I am Learning Jquery.I am Learning Jquery.I am Learning Jquery.</p>
+        </div>
+
+</body>
+</html>

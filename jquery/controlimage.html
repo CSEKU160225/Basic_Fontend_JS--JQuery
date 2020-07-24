@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Slider functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <!-- Javascript -->
+      <script>
+         $(function() {
+            $( "#height, #width").slider({
+               value:100,
+               min:0,
+               max:500,
+               
+               slide: cntrolimg
+            });
+            function cntrolimg(argument) {
+               // body...
+               height=$("#height").slider('value');
+               width=$("#width").slider('value');
+               $("#im").css({
+               height:height,
+               width:width
+               });
+               $("#state").html("Height: "+height+" Width "+width);
+            }
+         });
+      </script>
+   </head>
+   
+   <body>
+      <div id="height"></div><br>
+      <div id="width"></div><br>
+      <div id="state"></div>
+
+      <!-- HTML --> 
+<img src="top.png" id="im">
+   </body>
+</html>

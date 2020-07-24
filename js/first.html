@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+
+<section class="content">
+	<div class="header">
+		<h2><script type="text/javascript">document.write("Js Fundamental");</script> </h2>
+	</div>
+	<div class="maincontain">
+		<h3><script>document.write("Js Fundamental");
+		document.write("</br>")
+         var a=10;
+         var b=10;
+         sum=a+b;
+         div= a/b;
+         document.write(sum+" Devisional is "+div);
+         document.write("</br>");
+         document.write("Function");
+         function mul(a,b) {
+         	// body...
+         	mul=a*b;
+         	return mul;
+         }
+         document.write(" "+mul(5,2));
+	</script></h3>
+			<h2>Print In js</h2>
+	<div id="show">
+	<script type="text/javascript">
+		var a="Mehadi";
+		var b="Hasan";
+		c=a+b;
+       document.getElementById('show').innerHTML=c;
+       //window.alert(c);
+       //console.log("hey"); inspect korar por console dekha jbe
+       //console.error("OK");
+       //console.warn("ji");
+
+	</script>
+	<h3>Array</h3>
+	<script type="text/javascript">
+		var arr1=[1,2,5,3];
+		var arr2=[4,5,6,7];
+		arr=arr1.concat(arr2);
+		document.write(arr);
+		document.write("</br>");
+		var a=['d','b','c','a'];
+		k=a.sort();
+		document.write(k);
+		document.write("</br>");
+		document.write("Integer sort"+"</br>");
+		var e=[6,3,4,2,5,1];
+		document.write("Before sort "+e);
+		function arrsort(x,y) {
+			// body...
+			return (x-y);
+		}
+		document.write("</br>");
+		document.write("After sort ");
+		e.sort(arrsort);
+		document.write(e+"</br>");
+
+document.write("Loop"+"</br>");
+var color=['red','green','yellow'];
+for(i in color)
+{
+	document.write(color[i]+"</br>");
+}
+ document.write("Use function"+"</br>");
+
+
+	</script>
+<!-- 	<script type="text/javascript">
+		var person = {
+  firstName: "John",
+  lastName : "Doe",
+  id     : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();
+	</script> -->
+
+	<input type="text" name="" id="text">
+	<button onclick="function1()"> check</button>
+	<div id="show"></div>
+
+	<script >
+       function function1() {
+       	// body...
+       	var txt;
+       	var code=document.getElementById("text").value;
+       	switch(code)
+       	{
+           case "java":
+               txt="I love java";
+               break;
+           case "PHP":
+               txt="I Love PHP"
+               break;
+           case "Js":
+               txt="I LOVE jS";
+               break;
+            default:
+               txt="This is default";
+            
+       	}
+       	document.getElementById("show").innerHTML=txt;
+       }
+	</script>
+
+<button onclick="myFunction()">Click me</button>
+<div id="demo"></div>
+	<script>
+function myFunction() {
+  console.log("click here");
+}
+</script>
+<button ondblclick="myFunction1()">Double Click</button>
+<div id="demo"></div>
+	<script>
+function myFunction1() {
+  console.log("click here");
+}
+</script>
+<h3>Selector</h3>
+<p id="shw">Hasan</p>
+<div class="sn">Mehadi</div>
+<script type="text/javascript">
+	v1=document.getElementById("shw").innerText;
+	v2=document.querySelector("p").innerText;
+	v3=document.querySelectorAll("p")[0].innerText;
+	v4=document.querySelector(".sn").innerText;
+	document.write(v1+" "+v2+" "+v3+" "+v4+"</br>");
+	document.write("object and this key word");
+	function hasn() {
+		// body...
+		var a=300;
+		this.x=30;
+		this.y=20;
+		this.z=function () {
+			// body...
+			return this.x+this.y;
+		}
+	}
+	lp=new hasn();
+	document.write("</br>"+lp.y+" "+lp.z());
+</script>
+<h2>Prototype or inheritance</h2>
+<script type="text/javascript">
+	function summation(a,b) {
+		// body...
+		this.x=a;
+		this.y=b;
+		this.sum=function () {
+			// body...
+			return this.x+this.y;
+		}
+	}
+	function multiply(a,b) {
+		// body...
+		this.x=a; //this keyword is used for public..only variable is used for private
+		this.y=b;
+		this.mul=function () {
+			// body...
+			return this.x*this.y;
+		}
+	}
+
+	summation.prototype = new multiply;
+	summation.prototype.a = 100;
+	summation.k=120;//static jetar object create kora jbe na;
+	ta=new summation(5,8);
+	document.write(ta.mul()+" "+ta.a+"</br>");
+	document.write("static k is "+summation.k);
+
+</script>
+<h1>String method</h1>
+<script type="text/javascript">
+	function rev(s) {
+		// body...
+		return s.split("").reverse().join("");
+	}
+	var a="A B C D";
+	var k= rev(a);
+	document.write(k);
+</script>
+<h2>Set Time out and clear time out</h2>
+<script type="text/javascript">
+	function timeinit() {
+		// body...
+		time=setTimeout("timestart()",3000);
+		document.getElementById("show").innerHTML="Time Start.......";
+	}
+	function timestart() {
+		// body...
+		document.getElementById("show").innerHTML="Time Timegone.......";
+	}
+	function claertime() {
+		// body...
+		clearTimeout(time);
+		document.getElementById("show").innerHTML="Time Clear.......";
+	}
+</script>
+<div id="show"></div>
+<input type="button" name="" value="start" onclick="timeinit()">
+<input type="button" name="" value="clear" onclick="claertime()">
+<h2>Interval and clear interval</h2>
+<script type="text/javascript">
+	/*setInterval(function () {
+		// body...
+		alert("Hasan");
+	},1000);*/
+</script>
+<h2>Alert box, confirm and pompt </h2>
+<h2>Double == use kora hoi compare er jonno r === dara compare kore sathe data type o compare kore</h2>
+<script type="text/javascript">
+	//parseInt(value,redax)//redax mane holo number octal hole 8 okne bosbe r binary hole 2 bosbe.
+	//Number(vlue) sudu nuber return korbe 
+	var x="100aa";
+	console.log(parseInt(x));
+	console.log(Number(x));
+</script>
+<h2>Hosting Variable</h2>
+<script type="text/javascript">
+	var t=true;
+	function abcde() {
+		// body...
+		var t;
+		if (!t) {
+			 t=300;
+		}
+		document.write(t);
+	}
+	abcde();
+</script>
+<h2>Recursion</h2>
+<script type="text/javascript">
+	//var num=prompt("give number");
+	function factorial(n) {
+		// body...
+		if (n==0) {
+			return 1;
+		}
+		else{
+			return n*factorial(n-1);
+		}
+	}
+	document.write(factorial(num=5));
+</script>
+<h2>Email Validation </h2>
+<input type='text' id='txtEmail'/>
+<input type='submit' name='submit' onclick='Javascript:checkEmail();'/>
+<script language="javascript">
+
+function checkEmail() {
+
+    var email = document.getElementById('txtEmail');
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    if (!filter.test(email.value)) {
+    alert('Please provide a valid email address');
+    email.focus;
+    return false;
+ }
+}</script>
+<h2>Form</h2>
+<form name="myform" action="" method="">
+	<table>
+		<tr>
+			<td><input type="text" name="myvalue"></td>
+			<td><input type="button" name="" value="Click" onclick="myformmethod()"></td>
+		</tr>
+	</table>
+	
+</form>
+<script type="text/javascript">
+	function myformmethod() {
+
+		// body...
+		a=myform.myvalue.value;
+		if (a=="") {
+			alert("write something.........");
+		}
+		else
+		{
+			alert("you write"+a);
+		}
+	}
+</script>
+	</div>
+	</div>
+
+	<div class="footer">
+		<h2>&copy;<script>document.write("Js Fundamental");</script></h2>
+	</div>
+
+</section>
+<h2>Regular expression</h2>
+</body>
+</html>

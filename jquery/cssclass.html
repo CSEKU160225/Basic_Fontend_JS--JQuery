@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="cssclass.css">
+	<script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+<p id="p1">Click and the jquery css class </p>
+<button id="btn1">Addclass</button>
+<button id="btn2">Removeclass</button>
+<button id="btn3">Toggleclass</button>
+<button id="btn4">Css Method</button>
+<script type="text/javascript">
+	$(document).ready(function (argument) {
+		// body...
+		$("#btn1").click(function (argument) {
+			// body...
+			$("#p1").addClass("text");
+		});
+		$("#btn2").click(function (argument) {
+			// body...
+			$("#p1").removeClass("text");
+		});
+	
+
+		$("#btn3").click(function (argument) {
+			// body...
+			$("#p1").toggleClass("text");
+		});
+
+		$("#btn4").click(function (argument) {
+			// body...
+			$("#p1").css({"background-color": "red","font-style"     : "italic"});
+		});
+	});
+</script>
+</body>
+</html>

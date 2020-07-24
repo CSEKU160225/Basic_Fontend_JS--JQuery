@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+
+<section class="content">
+	<div class="header">
+		<h2><script type="text/javascript">document.write("JQuery Fundamental");</script> </h2>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			// body...
+			$("#btn").click(function () {
+				// body...
+				$("p").hide();
+				$("#idp").hide();
+			});
+		});
+	</script>
+	<div class="maincontain">
+		<p> Click the Button This will hide</p>
+		<p id="idp">This id will be hide</p>
+		<button id="btn">Hide</button>
+		<h2>Hide() Show() Toggle()</h2>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				// body...
+				$("#hide").click(function () {
+					// body...
+					$(".id1").hide();
+					$(".id2").hide();
+				});
+				$("#show").click(function () {
+					// body...
+					$(".id1").show();
+					$(".id2").show();
+				});
+
+			   	$("#toggle").click(function () {
+					// body...
+					$(".id1").toggle();
+					
+				});
+			});
+			
+		</script>
+		<button id="hide">Hide</button>
+		<button id="show">Show</button>
+		<button id="toggle">Toggle</button>
+		<h1 class="id1">I am Learning Jquery.</h1>
+		<p class="id2">I am Learning Jquery.I am Learning Jquery.I am Learning Jquery.I am Learning Jquery.I am Learning Jquery.I am Learning Jquery.I am Learning Jquery.I am Learning Jquery.</p>
+
+		
+	</div>
+	</div>
+
+	<div class="footer">
+		<h2>&copy;<script>document.write("JQuery Fundamental");</script></h2>
+	</div>
+
+</section>
+
+</body>
+</html>

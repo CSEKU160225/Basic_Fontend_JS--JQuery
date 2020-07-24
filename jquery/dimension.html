@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="cssclass.css">
+	<script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+	function alertbox(argument) {
+		// body...
+		alert("Custom Function");
+	}
+	$(document).ready(function (argument) {
+		// body...
+		$("#btn1").click(function (argument) {
+			// body...
+			$("#div1").height(500).width(500);
+		});
+			var a=10;
+	if (a>10) {
+		$("#div2").text("value is higer than 10");
+	}
+	else
+	{
+		$("#div2").text("value is  10 or less than 10");
+	}
+
+
+	$("#btn2").click(function (argument) {
+			// body...
+			alertbox();
+		});
+
+	});
+
+</script>
+
+<div id="div1"></div>
+<div id="div2"></div>
+<br>
+
+<button id="btn1">Resize div</button>
+<button id="btn2">Custom Function</button>
+</body>
+</html>
